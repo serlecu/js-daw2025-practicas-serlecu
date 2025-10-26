@@ -8,7 +8,7 @@ function wordsLoop() {
   let wordList = new Set();
   do {
     let lastWord = inWord();
-    if (lastWord) {
+    if (lastWord != null && lastWord !== '') {
       wordList.add(lastWord);
     } else {
       stop = true;
