@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD9_P3 - Sergio Lecuona</title>
+    <script type="module">
+        import * as t from '../scripts/temporizador.js';
+        
+        function displayFinAfter(ele) {
+            const Fin = document.createElement("p");
+            ele.after(Fin);
+            Fin.innerText = "Fin";
+        }
+
+        const primero = document.createElement('p')
+        document.body.appendChild(primero);
+        const segundo = document.createElement('p')
+        document.body.appendChild(segundo);
+
+        t.cuenta(6, 1000, primero, () => displayFinAfter(primero));
+        t.cuenta(60, 100, segundo, () => displayFinAfter(segundo));
+    </script>
+
+</head>
+<body>
+    <h1>UD9_P3 - Sergio Lecuona</h1>
+</body>
+</html>
